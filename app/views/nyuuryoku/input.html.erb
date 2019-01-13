@@ -1,0 +1,15 @@
+<h1>Form画面遷移テスト</h1>
+  <%= form_for @test, :url => {:controller => "nyuuryoku", :action => "kakunin"} do |f| %>
+    <%= f.text_field :test_input, value:@msg %>
+    <br><%= check_box_tag :test1 %>
+    <br><%= label_tag :test1,'朝は苦手だ' %>
+    <%= select_tag 'samurai[number]', options_for_select(["1", "2", "3", "4", "5","6"]) %>
+    <%= select :samurai, :pet, [["犬", "dog"], ["猫", "cat"],["馬", "horse"],["牛", "cow"]] %>
+    <br> <%= f.submit %>
+
+
+  <% end %>
+  <div id="main">
+    <%= @msg %>
+    </div>
+

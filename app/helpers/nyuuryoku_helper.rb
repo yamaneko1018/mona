@@ -1,0 +1,2 @@
+module NyuuryokuHelper
+end
